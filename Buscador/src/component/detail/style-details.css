@@ -1,0 +1,16 @@
+.rick-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-rick{
+    margin:30px
+}
+
+
+.dates-rick > h3{
+    color: #01a9bf;
+    font-weight: 600;
+}

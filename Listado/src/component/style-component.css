@@ -1,0 +1,77 @@
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecera {display: flex;
+flex-direction: row;
+align-items: center;
+margin-top:30px
+}
+
+
+
+.logo-marca {
+    width: 150px;
+}
+
+.card-item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #877e7e;
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 5px 2px 2px #877e7e;
+}
+
+.button-item {
+    padding: 5px 15px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+.button-item:hover {
+    background:#d72d2d;
+    border:none;
+    cursor:pointer
+}
+
+.cart {
+    
+}
+
+.card-item-cart {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #877e7e;
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 5px 2px 2px #877e7e;
+    width: 150px;
+}
+
+.button-item-cart {    
+    padding: 5px 15px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor:pointer
+}
+
+.button-item-cart:hover {
+    background:#d72d2d;
+    border:none;
+    cursor:pointer
+}
+
+.prueba-menu:checked {
+    display:none
+  }

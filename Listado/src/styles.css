@@ -1,0 +1,13 @@
+body {
+ margin: 0px
+}
+
+.principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.prueba-menu:checked {
+  display:none
+}

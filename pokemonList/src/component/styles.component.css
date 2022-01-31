@@ -1,0 +1,25 @@
+.logo {
+    width: 25%;
+    height: auto;
+    display: block;
+    margin:auto;
+}
+
+
+.lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+  
+  
+  .foto-tarjeta {
+    max-width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  
+  }
+
+  

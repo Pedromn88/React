@@ -1,0 +1,28 @@
+.details {
+    background-color: #303030;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+  
+
+  }
+
+.description > p {
+    margin-left: 50px;
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+.banner-footer {
+  background-color: #891b1b;
+  padding: 50px;
+  margin-top: 30px
+}
+
+.letras-footer {
+  color: white;
+  font-size: 25px;
+}

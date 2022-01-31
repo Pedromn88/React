@@ -1,0 +1,23 @@
+body {
+  background: #2a2a2a
+}
+
+.header-logo {
+  display: block;
+  margin:auto
+}
+
+
+.main {
+  width: 75%; 
+  margin:0 auto
+}
+
+
+h1, h2, h3, p, label, a {
+  color:white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a {text-decoration: none;}

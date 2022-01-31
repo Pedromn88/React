@@ -1,0 +1,32 @@
+.list-cuadro{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+
+.list-cuadro > * {
+    margin-right: 15px;
+    
+}
+
+.avatar{
+    width: 106px;
+}
+
+.text-member {
+    font-size: 36px;
+}
+
+.list-cuadro > span {
+    font-size:12px;
+    color:white
+    
+}
+
+.css-e53awj-MuiStack-root {
+
+    justify-content: center;
+}
