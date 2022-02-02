@@ -7,14 +7,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { generatePath, Link } from 'react-router-dom';
 
 
 export const PokemonList = ()  => {
 
 const [pokemon, setPokemon] = useState ([])
-
-
-
 
 
 const loadData = () => {
@@ -36,7 +34,9 @@ return (
   <div className='lista'>
 
   {pokemon.map((pokemone) => (
-
+    <Link to={generatePath(`/pokemon/:id`, {
+      id: pokemone.id,
+    })}>
   <Card sx={{ width: 200, height: 'auto', margin: 1, padding: 1 }}>
 
     <CardActionArea>
@@ -52,13 +52,13 @@ return (
           ID: 
           {pokemone.id}
         </Typography>
-        <Typography gutterBottom variant="inherit" component="div">
+        <Typography gutterBottom variant="inherit" component="div" style={{ textTransform: 'capitalize'}}>
           {pokemone.name}
         </Typography>
       </CardContent>
     </CardActionArea>
     </Card>
- 
+    </Link>
   ))}
 
 </div>
