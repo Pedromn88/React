@@ -1,9 +1,12 @@
-
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header } from './component/Header';
-import { PokemonDetails } from './component/PokemonDetails';
-import { PokemonList } from './component/PokemonList';
+
+
+
+import { ListPage } from './page/listpage';
+import { DetailPage } from './page/detailpage';
+import { LoginPage } from './page/login';
+import { Footer } from './component/layout/footer';
 
 
 export const App = ()  => {
@@ -12,13 +15,15 @@ export const App = ()  => {
 return (
 
   <>
-  <Header />
+  
   <BrowserRouter>
   <Routes>
-  <Route path="/" element={<PokemonList />} />
-  <Route path="/pokemon/:id"element={<PokemonDetails />}/>
+  <Route path="/" element={<LoginPage />} />
+  <Route path="/list" element={<ListPage />} />
+  <Route path="/pokemon/:id"element={<DetailPage />}/>
   </Routes>
   </BrowserRouter>
+  
   </>
 );
 }

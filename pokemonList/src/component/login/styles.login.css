@@ -1,0 +1,86 @@
+.centrar {
+    background-image: url("https://images.alphacoders.com/998/thumb-1920-998181.jpg");
+    margin:0;
+    padding: 50px
+    
+  }
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.logos{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin:30px;
+    margin:auto;
+}
+
+ 
+.trainer {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+
+.login-form  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: content-box;
+    width: 50%;
+}
+
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+}
+
+.box-form{
+    padding: 30px;
+    background-color:#d03018;
+    align-items: center; 
+    border-radius: 15px;
+}
+
+
+.username, .password{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.username > label, .password > label {
+    font-size: 24px;
+    margin:15px 0;
+}
+
+.username > input, .password > input {
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    background:#ffcb05 !important;
+    color: #1d2c5e !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+
+.css-e53awj-MuiStack-root {
+    justify-content: center;
+}
+
+
+
+.botton-login {
+    margin:30px;
+    
+}
+

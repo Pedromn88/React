@@ -1,0 +1,67 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/07/13/08/31/pokemon-1513925_1280.jpg");
+  background-size: 10%;
+  background-repeat: repeat;
+}
+.lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    width: 75%;
+  }  
+  
+  .card {
+
+    width: 250px;
+    height: 250px;
+    margin:30px;
+    background-color: white;
+    opacity: 95%;
+  }
+.card:hover {
+    transform: scale(1.1);
+  }
+  
+  .headercard-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #4e7314;
+    padding:0px 15px;
+    
+  }
+
+  .headercard > p {
+    font-weight: 800;
+  }
+  
+  .imgheadercard {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    margin: 15px;
+  }
+  .pokeImg {
+    max-width: 75px;
+    display: block;
+    
+  }
+
+  .card-data > p {
+    text-transform: capitalize;
+  }
+
+  a {
+    text-decoration: none;
+    color:rgb(19, 18, 17)
+  }
+
+  

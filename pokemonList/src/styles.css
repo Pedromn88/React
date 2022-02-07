@@ -1,5 +1,8 @@
-.my-text {
-  color: blue;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+  font-family: 'Josefin Sans', cursive;
+  padding:0
 }
 
 .lista {
@@ -17,4 +20,6 @@
   margin: 0 auto;
 
 }
+
+
 

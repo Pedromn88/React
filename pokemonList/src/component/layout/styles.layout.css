@@ -1,0 +1,26 @@
+body {
+    
+    margin:0
+}
+
+.menu{
+    background: #d03018;
+    padding: 15px;
+}
+.logo {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin:30px;
+    margin:auto; 
+   
+}
+
+.footer{
+    background:#1a1919;
+    padding:30px
+}
+
+.footer > h3 {
+    color:white
+}
