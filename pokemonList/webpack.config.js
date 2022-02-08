@@ -22,6 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        type: 'asset/resource',
         exclude: /node_modules/,
         loader: "babel-loader",
       },

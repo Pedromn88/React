@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import rowRight from "../icons/right.png";
+import rowLeft from "../icons/left.png";
 
 
 import './styles.Details.css'
@@ -17,6 +19,8 @@ interface PokemonDetailsEntity {
 
     
 }
+
+
 
 const createPokemonDefault = () => ({
   id: '',
@@ -56,17 +60,13 @@ const createPokemonDefault = () => ({
 })
 
 
-
 export const PokemonDetails = ()  => {
+   
     const [pokemonDetails, setPokemonDetails] = React.useState<PokemonDetailsEntity>(createPokemonDefault());
-
-    
-
+ 
   
-    const { id } = useParams();
+     const { id } = useParams();
 
-    
-    
     
     React.useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}` ).then((res) => {
@@ -76,20 +76,20 @@ export const PokemonDetails = ()  => {
       }, [id]);
 
 
-      /*const handlePrevPage = () => {
-        setActualId(actualId - 1);    
-      };
-    
-      const handleNextPage = () => {
-        setActualId(actualId + 1);
-        
-      };*/
-      
+
 
 return (
 
   <><div className="details">
     <div className="headercard-details"><img className="imgheadercard" src="https://pngimg.com/uploads/pokeball/pokeball_PNG24.png"></img><h3>{pokemonDetails.id}</h3></div>
+    <div className="row-page">
+        <Link to={`/pokemon/${pokemonDetails.id - 1}`}>
+        <img className="row" src={rowLeft}></img>
+        </Link>
+        <Link to={`/pokemon/${pokemonDetails.id + 1}`}>
+          <img className="row" src={rowRight}></img>
+        </Link>
+      </div>
     <div className="card-details">
     <div className="card-1">
     <img className="imgdetails" src={pokemonDetails.sprites.other.dream_world.front_default}></img>
@@ -119,9 +119,12 @@ return (
     
       <div className="card-type">
       <h3>Type</h3> <p style={{ textTransform: 'capitalize' }}>{pokemonDetails.types.map((tipo) => tipo.type.name).join(" ")}</p>
+
       </div>
     </div>
     </div>
+
+    
   </div></>
 
 );

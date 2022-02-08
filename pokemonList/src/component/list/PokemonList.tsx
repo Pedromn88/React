@@ -2,13 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import  "./styles.list.css"
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+
 import { generatePath, Link } from 'react-router-dom';
-import { Header } from '../layout/Header';
+
 
 
 export const PokemonList = ()  => {
