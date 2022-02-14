@@ -90,12 +90,12 @@ export const Pokedex = () => {
         </div>       
         </Col>
 
-        <Col md="3">
+        <Col md="6">
           <div>
         <p className=" datos" style={{ textTransform: 'capitalize' }}>{name}</p>
         </div>
         </Col>
-        <Col md="3">
+        <Col md="2">
         <div>
         <p className="fondo-letra datos">{id}</p>
         </div>
@@ -125,9 +125,9 @@ export const Pokedex = () => {
         <p className=" datos">{height}</p>
         </Col>
 
-        <Col lg="3">
+        <Col lg="4">
         <h2> Type</h2>
-        <p className=" datos">{type}</p> 
+        <p className=" datos" style={{ textTransform: 'capitalize' }}>{type}</p> 
         </Col>
         </Row>
         <div className="shiny">
@@ -146,19 +146,17 @@ export const Pokedex = () => {
            
            <div className="big-light-boarder">
              <div className="big-light blue">
-               <div className="big-dot light-blue"></div>
+               
              </div>
            </div>
           
            <div className="small-lights-container">
-             <div className="small-light red">
-               <div className="dot light-red"></div>
+             <div className="small-light red"> 
              </div>
              <div className="small-light yellow">
-               <div className="dot light-yellow"></div>
+      
              </div>
              <div className="small-light green">
-               <div className="dot light-green"></div>
              </div>
            </div>
          </div>
