@@ -1,6 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import './pokedex-style.css' 
+
+import { Col, Figure, Form, Row } from "react-bootstrap";
+import noSignal from "../img/nosignal.jpg"
+
+import './pokedex-style.scss' 
+
 
 export const Pokedex = () => {
     const [id, setId ]= useState(null);
@@ -14,7 +19,7 @@ export const Pokedex = () => {
     
   
     React.useEffect(() => {
-      if( id > 0 ) {
+      if( id > 0 ) { 
       axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((rest) => {
   
         setName(rest.data.name);
@@ -32,36 +37,138 @@ export const Pokedex = () => {
     };
   
     return ( 
-    <><h1>POKEDEX</h1>
+    <>
+    
       <div className="pokedex">
-      <select value={id} onChange={handleChange}>
-        <option selected="" disabled="disabled">Selecciona tu Pokemon</option>
-          <option value="1">Bulbasur</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      <div className="datos-1">
-        <div>
-        <h2> ID</h2>
-        <p className="fondo-letra">{id}</p>
-        </div>
-        <div>
-        <h2> Nombre</h2>
-        <p className="fondo-letra">{name}</p>
-        </div>
-        </div>
+      <Row>
+      <Col lg="6">
+        <Form.Select size="sm" aria-label="Default select example"   onChange={handleChange}>
+        <option value="0" > Selecciona tu pokemon
+        </option>
+        <option value="1">Bulbasur</option>
+          <option value="25">Pikachu</option>
+          <option value="4">Charmander</option>
+        </Form.Select>
+        <div className="pokedex-1">
         <h2> Foto</h2>
-        <img className="fondo-img" src={img}></img>
-        <h2> Peso</h2>
-        <p>{weight}</p>
-        <h2> Altura</h2>
-        <p>{height}</p>
-        <h2> Shiny</h2>      
-        <img className="fondo-img" src={shiny}></img>
-        <h2> Tipo</h2>
-        <p>{type}</p>  
+        <div className="screen-container">
+          <div className="screen">
+            <div className="top-screen-lights">
+              <div className="mini-light red"></div>
+              <div className="mini-light red"></div>
+            </div>
+            <div id="main-screen">
+              <Figure>
+                <Figure.Image
+                className="fondo-img"
+                  width={180}
+                  height={180}
+                  alt="171x180"
+                  src={img}
+                  />    
+              </Figure>
+            </div>
+            <div className="bottom-screen-lights">
+              <div className="small-light red">
+                <div className="dot light-red"></div>
+              </div>
+              <div className="burger">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Row className="justify-content-md-center">
+        <Col md="2">
+        <div className="right-nav-container">
+              <div className="big-button">
+        </div> 
+        </div>       
+        </Col>
+
+        <Col md="3">
+          <div>
+        <p className=" datos" style={{ textTransform: 'capitalize' }}>{name}</p>
+        </div>
+        </Col>
+        <Col md="3">
+        <div>
+        <p className="fondo-letra datos">{id}</p>
+        </div>
+        </Col>
+        <Col md="2">
+        <div className="right-nav-container">
+              <div className="nav-button">
+
+                <div className="nav-button-vertical"></div>
+                <div className="nav-button-horizontal">
+                  
+                </div>
+        </div> 
+        </div>       
+        </Col>
+        </Row>
+        </div>
+        </Col>
+     <Col className="pokedex-2" lg="6">
+       <Row className="justify-content-md-center">
+       <Col lg="3">
+        <h2> Weight</h2>
+        <p className=" datos">{weight}</p>
+        </Col>
+        <Col lg="3">
+        <h2> Height</h2>
+        <p className=" datos">{height}</p>
+        </Col>
+
+        <Col lg="3">
+        <h2> Type</h2>
+        <p className=" datos">{type}</p> 
+        </Col>
+        </Row>
+        <div className="shiny">
+        <h2> Shiny</h2> 
+        <Figure>
+        <Figure.Image
+    
+          width={180}
+          height={100}
+          alt="80x80"
+          src={shiny}
+          />    
+        </Figure>
+        </div>
+        <div className="lights-container">
+           
+           <div className="big-light-boarder">
+             <div className="big-light blue">
+               <div className="big-dot light-blue"></div>
+             </div>
+           </div>
+          
+           <div className="small-lights-container">
+             <div className="small-light red">
+               <div className="dot light-red"></div>
+             </div>
+             <div className="small-light yellow">
+               <div className="dot light-yellow"></div>
+             </div>
+             <div className="small-light green">
+               <div className="dot light-green"></div>
+             </div>
+           </div>
+         </div>
+
+
+        </Col> 
         
+        </Row> 
       </div>
+
       </>
     );
   };

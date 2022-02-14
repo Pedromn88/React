@@ -9,7 +9,7 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx"],
   },
   entry: {
-    app: ["./index.tsx", "./styles.css" , "./component/pokedex-style.css"],
+    app: ["./index.tsx", "./styles.scss" , "./component/pokedex-style.scss"],
   },
   devtool: "eval-source-map",
   stats: "errors-only",
@@ -31,6 +31,17 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "html-loader",
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
       },
       {
         test: /\.css$/,
