@@ -14,15 +14,11 @@ module.exports = {
   stats: "errors-only",
   output: {
     filename: "[name].[chunkhash].js",
-   
   },
-
-
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        type: 'asset/resource',
         exclude: /node_modules/,
         loader: "babel-loader",
       },

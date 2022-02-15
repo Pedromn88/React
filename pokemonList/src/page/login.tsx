@@ -1,4 +1,5 @@
 import React from "react"
+import { Footer } from "../component/layout/footer"
 
 
 
@@ -12,6 +13,7 @@ export const LoginPage = ()  => {
     return (
 
         <><LoginForm />
+    
         </>
     )
 }

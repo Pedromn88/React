@@ -1,8 +1,9 @@
 .details {
-    background-color: white;
-    width: 30%;
+    background-color: rgb(197, 197, 197);
+    width: 50%;
     margin: 0 auto;
-    margin-top: 30px
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 
@@ -44,6 +45,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     
 }
 
@@ -85,3 +87,25 @@
     text-align: center
 }
 
+@media (max-width: 1024px) {
+    .details {
+        width: 80%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .details {
+        width: 80%;
+        
+    }
+
+    .card-name {
+        margin-left: 0px;
+    }
+    .caracteristicas {
+        justify-content: center;
+    }
+    .caracteristicas > div { 
+        margin-left: 0px;
+    }
+  }

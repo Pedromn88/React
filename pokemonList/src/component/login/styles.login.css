@@ -84,3 +84,19 @@ h2 {
     
 }
 
+@media (max-width: 1800px) {
+    .centrar {
+        background-image: none
+  }
+}
+
+@media (max-width: 1800px) {
+    .trainer {
+        display: none
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+  }
