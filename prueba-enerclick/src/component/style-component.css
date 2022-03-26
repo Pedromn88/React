@@ -1,0 +1,20 @@
+#chart {
+    border: 0.5px solid rgb(39, 39, 39);
+    box-sizing: border-box; 
+    padding: 30px 60px;
+    border-radius: 15px;
+}
+
+.title{
+    text-align:center
+}
+
+.apexcharts-legend-marker {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.apexcharts-legend-text {
+    font-size: 10px !important;
+}
+
